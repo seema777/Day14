@@ -16,3 +16,16 @@ if [[ $word =~ $pat ]]
   echo Invalid
 fi
 
+
+#!/bin/bash -x
+shopt -s extglob
+echo "please enter Last Name"
+read  word
+pat="^[[:upper:]][A-Z]{1}[a-zA-Z]{3,}$"
+if [[ $word =~ $pat ]]
+  then
+  echo Valid
+  else
+  echo Invalid
+fi
+
