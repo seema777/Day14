@@ -44,3 +44,18 @@ if [[ $word =~ $pat ]]
   echo invalid
 fi
 
+
+#!/bin/bash -x
+shopt -s extglob
+echo "please enter Mobile Number if it is valid or not"
+read number
+
+pat="^(91)[ ][6-9]{1}[0-9]{9}$"
+
+if [[ $number =~ $pat ]]
+  then
+  echo valid
+  else
+  echo invalid
+fi
+
